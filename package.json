@@ -1,0 +1,16 @@
+{
+  "name": "bis-ai-regulatory-qa-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"npm run backend\" \"npm run frontend\"",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": ".venv\\Scripts\\python.exe backend/main.py",
+    "build": "npm --prefix frontend run build",
+    "start": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"npm run backend\" \"npm run frontend\"",
+    "lint": "npm --prefix frontend run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
